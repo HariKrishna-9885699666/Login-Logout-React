@@ -1,27 +1,21 @@
 {
-  "name": "task_board",
+  "name": "react-signup-signin-logout-features",
   "version": "0.1.0",
+  "description": "User Signup, Signin and Signout is implemented in React using LocalStorage.",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.4.1",
     "formik": "^2.1.4",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.0.0",
-    "react-burger-menu": "^2.6.13",
     "react-confirm-alert": "^2.6.1",
-    "react-datepicker": "^2.14.1",
     "react-dom": "^16.13.1",
-    "react-dropdown": "^1.7.0",
     "react-native-base64": "0.0.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-simple-card": "^2.0.2",
-    "react-toasts": "^3.0.6",
-    "reactjs-popup": "^1.5.0"
+    "react-toasts": "^3.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "author": {
+    "name": "Hari Krishna Anem",
+    "email": "anemharikrishna@gmail.com",
+    "url": "https://harikrishna.netlify.com/"
   }
 }
