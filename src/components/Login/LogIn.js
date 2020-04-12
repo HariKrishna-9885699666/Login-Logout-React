@@ -65,7 +65,7 @@ class LogIn extends React.Component {
             <form onSubmit={props.handleSubmit}>
               <div>
                 <header className="App-header">
-                  React Signup, Singin, Login, Logout features
+                  React Signup, Signin, Logout features
                 </header>
                 <div>
                   <div>
