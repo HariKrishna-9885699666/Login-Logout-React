@@ -1,21 +1,23 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: #000;
-}
-
 .body {
   align-items: center;
   justify-content: center;
   align-self: center;
   align-content: center;
   background-color: red;
+}
+
+.divMiddle {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  display: inline-flex;
+}
+
+.form-group .errorMsg {
+  padding-left: 10px;
+  color: red;
+  font-size: 13px;
 }

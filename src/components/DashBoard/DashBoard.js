@@ -1,8 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import "./DashBoard.css";
-import { confirmAlert } from "react-confirm-alert";
-import "react-confirm-alert/src/react-confirm-alert.css";
+import SweetAlert from "react-bootstrap-sweetalert";
 const _ = require("lodash");
 
 class DashBoard extends React.Component {
@@ -14,7 +12,7 @@ class DashBoard extends React.Component {
       boardItem: "",
       toggle: false,
       submit: true,
-      change: true,
+      logout: false,
       loggedInUserObj: {},
     };
   }
@@ -33,19 +31,8 @@ class DashBoard extends React.Component {
   };
 
   onLogout = () => {
-    confirmAlert({
-      title: "Confirm to submit",
-      message: "Are you sure to do this.",
-      buttons: [
-        {
-          label: "Yes",
-          onClick: () => this.onLogoutYes(),
-        },
-        {
-          label: "No",
-          onClick: () => alert("Click No"),
-        },
-      ],
+    this.setState({
+      logout: !this.state.logout,
     });
   };
 
@@ -65,24 +52,55 @@ class DashBoard extends React.Component {
 
     return (
       <div>
-        <span className="logout">
-          <h2>HELLO {localUname}</h2>
-        </span>
-        <span className="HelloUser">
-          <button
-            onClick={this.onLogout}
-            style={{
-              backgroundColor: "61dafb",
-              color: "#282c34",
-              float: "right",
-            }}
-            className="LogoutBtn"
-          >
-            LOGOUT
-          </button>
-        </span>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+          <div className="container">
+            <img src="./logo.png" alt="" />
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarResponsive">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item active" onClick={this.onLogout}>
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={this.onLogout}
+                  >
+                    LOGOUT
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
+        <div className="container">
+          <h1 className="mt-4">HELLO {localUname}</h1>
+          <p>Welcome to DashBoard</p>
+        </div>
         {!this.state.submit ? <Redirect to={`/`} /> : null}
+        {this.state.logout ? (
+          <SweetAlert
+            warning
+            showCancel
+            confirmBtnText="Yes"
+            confirmBtnBsStyle="danger"
+            title="Are you sure?"
+            onConfirm={this.onLogoutYes}
+            onCancel={this.onLogout}
+            focusCancelBtn
+          ></SweetAlert>
+        ) : (
+          ""
+        )}
       </div>
     );
   }

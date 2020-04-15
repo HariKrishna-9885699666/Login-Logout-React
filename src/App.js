@@ -1,10 +1,12 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import LogIn from "./components/Login/LogIn";
 import DashBoard from "./components/DashBoard/DashBoard";
 import Register from "./components/Register/Register";
 import { ProtectedRoute } from "./ProtectedRoute";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Page404 from "./components/Page404/Page404";
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
         <Route path="/" exact component={LogIn} />
         <Route path="/register" exact component={Register} />
         <ProtectedRoute exact path="/dashboard" component={DashBoard} />
-        <Route path="*" component={() => "404 Not Found"} />
+        <Route path="*" component={Page404} />
       </Switch>
     </Router>
   );

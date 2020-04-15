@@ -7,7 +7,6 @@ import {
 import { Redirect, Link } from "react-router-dom";
 import base64 from "react-native-base64";
 import { Formik } from "formik";
-import "./Login.css";
 import { validateName, validatePassword } from "../../validations/validations";
 
 class LogIn extends React.Component {
@@ -62,74 +61,104 @@ class LogIn extends React.Component {
           }}
         >
           {(props) => (
-            <form onSubmit={props.handleSubmit}>
-              <div>
-                <header className="App-header">
-                  React Signup, Signin, Logout features
-                </header>
-                <div>
-                  <div>
-                    <div className="logincontainer">
-                      <label>
-                        <b>Username</b>
-                        <span className="error">*</span>
-                        <span className="errorMsg">
-                          {props.errors.userName &&
-                            props.touched.userName &&
-                            props.errors.userName}
-                        </span>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="userName"
-                        name="userName"
-                        onChange={props.handleChange}
-                        onBlur={props.handleBlur}
-                        value={props.values.userName}
-                      />
-
-                      <label>
-                        <b>Password</b>
-                        <span className="error">*</span>
-                        <span className="errorMsg">
-                          {props.errors.password &&
-                            props.touched.password &&
-                            props.errors.password}
-                        </span>
-                      </label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        placeholder="password"
-                        name="password"
-                        onChange={props.handleChange}
-                        onBlur={props.handleBlur}
-                        value={props.values.password}
-                      />
-
-                      <button type="submit">Log In</button>
-                      <Link to={"/register"}>Create Account</Link>
+            <div className="container mt-2 mb-4 divMiddle">
+              <div className="col-sm-8 ml-auto mr-auto">
+                <h1 className="display-5 text-center pb-5">
+                  <u>React Signup, Signin, Logout features</u>
+                </h1>
+                <div
+                  className="tab-content col-sm-6 ml-auto mr-auto"
+                  id="pills-tabContent"
+                >
+                  <div
+                    className="tab-pane fade show active"
+                    id="pills-signin"
+                    role="tabpanel"
+                    aria-labelledby="pills-signin-tab"
+                  >
+                    <div className="col-sm-12 border border-primary shadow rounded pt-2">
+                      <div className="text-center">
+                        <img
+                          src="./logo.png"
+                          className="rounded-circle border p-1"
+                          alt=""
+                        />
+                      </div>
+                      <form onSubmit={props.handleSubmit}>
+                        <div className="form-group">
+                          <label className="font-weight-bold">
+                            Username <span className="text-danger">*</span>
+                            <span className="errorMsg">
+                              {props.errors.userName &&
+                                props.touched.userName &&
+                                props.errors.userName}
+                            </span>
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="UserName"
+                            name="userName"
+                            onChange={props.handleChange}
+                            onBlur={props.handleBlur}
+                            value={props.values.userName}
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label className="font-weight-bold">
+                            Password <span className="text-danger">*</span>
+                            <span className="errorMsg">
+                              {props.errors.password &&
+                                props.touched.password &&
+                                props.errors.password}
+                            </span>
+                          </label>
+                          <input
+                            type="password"
+                            className="form-control"
+                            placeholder="***********"
+                            name="password"
+                            onChange={props.handleChange}
+                            onBlur={props.handleBlur}
+                            value={props.values.password}
+                          />
+                        </div>
+                        <div className="form-group">
+                          <div className="row">
+                            <div className="col text-right">
+                              {" "}
+                              <Link to={"/register"}>Create Account</Link>{" "}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="form-group">
+                          <input
+                            type="submit"
+                            name="submit"
+                            value="Sign In"
+                            className="btn btn-block btn-primary"
+                          />
+                        </div>
+                      </form>
+                      {localStorage.getItem(props.values.userName) &&
+                      JSON.parse(localStorage.getItem(props.values.userName))
+                        .isUserLoggedIn ? (
+                        <Redirect
+                          to={{
+                            pathname: "/dashboard",
+                            state: { userName: props.values.userName },
+                          }}
+                        />
+                      ) : null}
                     </div>
                   </div>
-
-                  {localStorage.getItem(props.values.userName) &&
-                  JSON.parse(localStorage.getItem(props.values.userName))
-                    .isUserLoggedIn ? (
-                    <Redirect
-                      to={{
-                        pathname: "/dashboard",
-                        state: { userName: props.values.userName },
-                      }}
-                    />
-                  ) : null}
                 </div>
-                <ToastsContainer
-                  store={ToastsStore}
-                  position={ToastsContainerPosition.TOP_RIGHT}
-                />
               </div>
-            </form>
+              <ToastsContainer
+                store={ToastsStore}
+                position={ToastsContainerPosition.TOP_RIGHT}
+              />
+            </div>
           )}
         </Formik>
       </div>
