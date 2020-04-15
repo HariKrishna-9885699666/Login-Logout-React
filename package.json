@@ -9,7 +9,9 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
     "formik": "^2.1.4",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.15",
+    "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-bootstrap-sweetalert": "^5.1.9",
     "react-dom": "^16.13.1",
@@ -43,5 +45,6 @@
     "name": "Hari Krishna Anem",
     "email": "anemharikrishna@gmail.com",
     "url": "https://harikrishna.netlify.com/"
-  }
+  },
+  "devDependencies": {}
 }

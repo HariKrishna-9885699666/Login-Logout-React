@@ -68,7 +68,10 @@ class DashBoard extends React.Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item active" onClick={this.onLogout}>
+                <li
+                  className="nav-item active text-right"
+                  onClick={this.onLogout}
+                >
                   <button
                     type="button"
                     className="btn btn-danger"
@@ -101,6 +104,57 @@ class DashBoard extends React.Component {
         ) : (
           ""
         )}
+
+        {/* <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+          <a className="navbar-brand" href="#">
+            Navbar
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <br />
+
+        <div className="container">
+          <h3>Collapsible Navbar</h3>
+          <p>
+            In this example, the navigation bar is hidden on small screens and
+            replaced by a button in the top right corner (try to re-size this
+            window).
+          </p>
+          <p>
+            Only when the button is clicked, the navigation bar will be
+            displayed.
+          </p>
+          <p>
+            Tip: You can also remove the .navbar-expand-md className to ALWAYS
+            hide navbar links and display the toggler button.
+          </p>
+        </div> */}
       </div>
     );
   }
