@@ -54,7 +54,7 @@ class DashBoard extends React.Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top">
           <div className="container">
-            <img src="./logo.png" alt="" />
+            <img src="./logo.png" alt="" className="rotate" />
             <button
               className="navbar-toggler"
               type="button"

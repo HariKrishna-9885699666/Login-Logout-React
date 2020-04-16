@@ -80,7 +80,7 @@ class LogIn extends React.Component {
                       <div className="text-center">
                         <img
                           src="./logo.png"
-                          className="rounded-circle border p-1"
+                          className="rounded-circle border p-1 rotate"
                           alt=""
                         />
                       </div>
