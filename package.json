@@ -2,6 +2,11 @@
   "name": "react-signup-signin-logout-features",
   "version": "0.1.0",
   "description": "User Signup, Signin and Signout is implemented in React using LocalStorage.",
+  "author": {
+    "name": "Hari Krishna Anem",
+    "email": "anemharikrishna@gmail.com",
+    "url": "https://harikrishna.netlify.com/"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -40,11 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "author": {
-    "name": "Hari Krishna Anem",
-    "email": "anemharikrishna@gmail.com",
-    "url": "https://harikrishna.netlify.com/"
   },
   "devDependencies": {}
 }
