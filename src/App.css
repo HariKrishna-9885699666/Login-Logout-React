@@ -26,6 +26,12 @@
   animation: rotation 8s infinite linear;
 }
 
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
