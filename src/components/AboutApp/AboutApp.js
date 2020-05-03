@@ -1,5 +1,13 @@
 import React from "react";
-import { FaUser, FaMobile, FaAt, FaBoxOpen } from "react-icons/fa";
+import {
+  FaUser,
+  FaMobile,
+  FaAt,
+  FaBoxOpen,
+  FaGithub,
+  FaLinkedin,
+  FaLink,
+} from "react-icons/fa";
 
 class AboutApp extends React.Component {
   render() {
@@ -55,6 +63,20 @@ class AboutApp extends React.Component {
                           <li className="list-group-item">
                             <FaUser className="mr-3" />
                             Hari Krihna Anem
+                            <a
+                              href="https://github.com/HariKrishna-9885699666"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaGithub className="ml-3" />
+                            </a>
+                            <a
+                              href="https://www.linkedin.com/in/anemharikrishna"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaLinkedin className="ml-3" />
+                            </a>
                           </li>
                           <li className="list-group-item">
                             <FaMobile className="mr-3" />
@@ -63,6 +85,16 @@ class AboutApp extends React.Component {
                           <li className="list-group-item">
                             <FaAt className="mr-3" />
                             anemharikrishna@gmail.com
+                          </li>
+                          <li className="list-group-item">
+                            <FaLink className="mr-3" />
+                            <a
+                              href="https://harikrishna.netlify.app"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Portfolio
+                            </a>
                           </li>
                         </ul>
                       </div>
@@ -116,6 +148,10 @@ class AboutApp extends React.Component {
                           <li className="list-group-item">
                             <FaBoxOpen className="mr-3" />
                             React Native Base s64
+                          </li>
+                          <li className="list-group-item">
+                            <FaBoxOpen className="mr-3" />
+                            React Icons
                           </li>
                         </ul>
                       </div>
