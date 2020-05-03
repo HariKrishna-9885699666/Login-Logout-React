@@ -62,7 +62,7 @@ class AboutApp extends React.Component {
                         <ul className="list-group">
                           <li className="list-group-item">
                             <FaUser className="mr-3" />
-                            Hari Krihna Anem
+                            Hari Krishna Anem
                             <a
                               href="https://github.com/HariKrishna-9885699666"
                               target="_blank"
