@@ -147,7 +147,7 @@ class AboutApp extends React.Component {
                           </li>
                           <li className="list-group-item">
                             <FaBoxOpen className="mr-3" />
-                            React Native Base s64
+                            React Native Base 64
                           </li>
                           <li className="list-group-item">
                             <FaBoxOpen className="mr-3" />
