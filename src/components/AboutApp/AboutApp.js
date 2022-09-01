@@ -96,6 +96,16 @@ class AboutApp extends React.Component {
                               Portfolio
                             </a>
                           </li>
+                          <li className="list-group-item">
+                            <FaLink className="mr-3" />
+                            <a
+                              href="https://harikrishna.hashnode.dev"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Blog
+                            </a>
+                          </li>
                         </ul>
                       </div>
                     </div>
